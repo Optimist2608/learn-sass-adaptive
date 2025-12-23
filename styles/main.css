@@ -47,9 +47,9 @@ img {
 .container {
   display: flex;
   max-width: 100vw;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 100px;
-  height: 100vh;
+  min-height: 100vh;
   flex-direction: column;
 }
 
@@ -541,7 +541,7 @@ img {
        object-fit: contain;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 500px) {
   .container {
     flex-direction: column;
     gap: 40px;
