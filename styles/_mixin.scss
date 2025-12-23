@@ -1,0 +1,13 @@
+@mixin flex ($direction:row, $wrap:nowrap, $justify:center, $align:normal) {
+    display: flex;
+    flex-direction: $direction ;
+    flex-wrap:$wrap ;
+    justify-content:$justify ;
+    align-items: $align;
+}
+@mixin padding ($left, $right, $top, $bottom) { //да я не знаю в каком порядке там))
+    padding-left:$left;
+    padding-right:$right;
+    padding-top:$top;
+    padding-bottom:$bottom;
+}

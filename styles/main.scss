@@ -1,0 +1,215 @@
+@use 'importer' as *;
+
+.head {
+    width: 100%;
+    @include flex(row, nowrap, space-between, normal);
+    border-bottom: 1px solid $hr-color;
+    height: 95px;
+    padding-top: 4px;
+    padding-left:162px;
+    padding-right: 137px;
+    
+    .left_btns {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        
+        .btn {
+            @include padding(24px, 24px, 14px, 14px);
+            border: 1px solid $hr-color;
+            border-radius: 100px;
+            color: $description-color;
+            line-height: 150%;
+            text-align: center;
+            font-family: 'Manrope-Medium';
+            cursor: pointer;
+            background-color: transparent;
+            width: 126px;
+            align-self: center;
+        }
+        #problema {
+            position: relative;
+            top: -1px;
+            left: -2.4px;
+        }
+        .active {
+        color: $active;
+        background-color: $flexbgr-color;
+        font-family: 'Manrope-Medium';
+        width: 98px;
+        line-height: 150%;
+        align-self: center;
+        }}
+    .logo {
+            width: 60px;
+            height: 60px; // еле еле подгоняется очень плохой макет я считаю без сетки на глаз его делали очень плохой,подгонять приходится для писксель перфекта
+            position: relative;
+            left: 5px;
+            top: 12px;
+            .logo_pic {
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+            } 
+        }
+    .right_btns {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        
+        .shop {
+            width: 52px;
+            height: 52px;
+            cursor: pointer;
+            
+            .shop_pic {
+                width: calc(100% - 1.5px);
+                height: calc(100% - 1.5px);
+                object-fit: contain;
+                vertical-align: middle;
+            }
+        }
+        
+        .r_btn {
+            @include padding(20px, 20px, 14px, 14px);
+            border: none;
+            border-radius: 100px;
+            color: $active;
+            cursor: pointer;
+            border: 1px solid $hr-color;
+            background-color: transparent;
+            font-family: 'Manrope-Medium';
+            width: 185px;
+        }
+        .hid {
+            display: none;
+        }
+        .hid_pic {
+            // display: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.main {
+    width: 100%;
+    margin-left:161px;
+    margin-right: 160px; 
+    @include flex(row, nowrap, flex-start, normal);
+    // height: 95px;
+    gap:80px;
+    .section {
+        width:844px ;
+        // @include flex (row, wrap, left, normal);
+        // gap:24px
+        // margin-bottom: 80px;
+        
+        .main_title {
+            display: flex;
+            justify-content: left;
+            gap:24px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            .title {
+                font-size: 2.667rem;
+                display: inline-block;
+                width: 632px;
+                font-family: 'Manrope-SemiBold';
+                color: $title-color;
+            }
+            p {
+                width: 185px;
+                font-family: 'Manrope-SemiBold';
+                color:$subtext-color ;
+                @include padding (14px, 14px, 8px, 8px);
+                height: 41px;
+                position: relative;
+                left: 3px;
+            }
+        }
+        .description {
+            color: $description-color;
+            width: 844px;
+            margin-bottom: 50px;
+            line-height: 150%;
+        }
+        .main_btns {
+            display: flex;
+            gap:10px ;
+        .main_btn {
+            background-color: $btn-color;
+            position: relative;
+            right: -2px;
+            @include padding(24px, 24px, 18px, 18px);
+            border: 0px;
+            width: 183.25px;
+            border-radius: 32px;
+            text-align: center;
+            color:$active ;
+            line-height: 150%;
+            font-family: 'Manrope-SemiBold';
+            cursor: pointer;
+            // margin-bottom: 80px;
+            .icon {
+                position: relative;
+                left: -4px;
+                top: 1px;
+            }
+            }
+        }
+        .b2 {
+            border: 1px solid $hr-color;
+            background-color: $bg-color;
+            @include padding(24px, 24px, 18px, 18px);
+            border-radius: 32px;
+            text-align: center;
+            color:$active ;
+            line-height: 150%;
+            font-family: 'Manrope-SemiBold';
+            cursor: pointer;
+            width: 183.25px;
+        }
+    }
+    
+    .cards {
+        margin-top: 80px;
+        width: 844px;
+        @include flex (row, wrap,'','' );
+        gap: 20px ;
+        padding: 20px;
+        outline: 2px solid $bg-color;
+        box-shadow: 0 0 0 8px $flexborder-color;
+        background-color:$flexbgr-color ;
+        border-radius:12px;
+        .card {
+            width: 392px;
+            border-radius: 12px;
+            border: 1px solid $cardborder-clor;
+            height: 143px;
+            padding: 30px;
+            gap: 10px;
+            background-color: $bg-color;
+            @include flex(column, nowrap, center, flex-start); 
+                .h3 { //h3 я думаю можно в маленькой верстке
+                    text-align: left;
+                    width: 100%; 
+                    margin: 0; 
+                    text-transform: uppercase;
+                    font-family: 'Manrope-SemiBold';
+                    font-size: 1.888889rem;
+                    color: $title-color;
+                }
+                .description_card {
+                    text-align: left; 
+                    width: 100%;
+                    margin: 0; 
+                    line-height: 150%;
+                    color: $description-color;
+                }
+            }
+        }
+    }
+
+
+
+@import 'media';
