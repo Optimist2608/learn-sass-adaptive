@@ -670,7 +670,11 @@ img {
     height: 438px;
     flex: 0 0 auto;
   }
-  .container .main .kurtka .kurtka_pic {
+  .container .main .kurtka:hover {
+    transform: none;
+    filter: none;
+  }
+  .container .main .kurtka:hover .kurtka_pic {
     width: 100%;
     height: 100%;
     -o-object-fit: contain;
